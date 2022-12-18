@@ -1,0 +1,183 @@
+{
+    "apiVersion": "v1",
+    "items": [
+        {
+            "apiVersion": "v1",
+            "kind": "Node",
+            "metadata": {
+                "annotations": {
+                    "kubeadm.alpha.kubernetes.io/cri-socket": "unix:///var/run/cri-dockerd.sock",
+                    "node.alpha.kubernetes.io/ttl": "0",
+                    "volumes.kubernetes.io/controller-managed-attach-detach": "true"
+                },
+                "creationTimestamp": "2022-08-08T06:26:26Z",
+                "labels": {
+                    "beta.kubernetes.io/arch": "amd64",
+                    "beta.kubernetes.io/os": "linux",
+                    "kubernetes.io/arch": "amd64",
+                    "kubernetes.io/hostname": "docker-desktop",
+                    "kubernetes.io/os": "linux",
+                    "node-role.kubernetes.io/control-plane": "",
+                    "node.kubernetes.io/exclude-from-external-load-balancers": ""
+                },
+                "name": "docker-desktop",
+                "resourceVersion": "450893",
+                "uid": "4c15c101-d811-4128-941f-d26a54f2a19e"
+            },
+            "spec": {},
+            "status": {
+                "addresses": [
+                    {
+                        "address": "192.168.65.4",
+                        "type": "InternalIP"
+                    },
+                    {
+                        "address": "docker-desktop",
+                        "type": "Hostname"
+                    }
+                ],
+                "allocatable": {
+                    "cpu": "6",
+                    "ephemeral-storage": "56453061334",
+                    "hugepages-1Gi": "0",
+                    "hugepages-2Mi": "0",
+                    "memory": "7946088Ki",
+                    "pods": "110"
+                },
+                "capacity": {
+                    "cpu": "6",
+                    "ephemeral-storage": "61255492Ki",
+                    "hugepages-1Gi": "0",
+                    "hugepages-2Mi": "0",
+                    "memory": "8048488Ki",
+                    "pods": "110"
+                },
+                "conditions": [
+                    {
+                        "lastHeartbeatTime": "2022-08-19T13:58:22Z",
+                        "lastTransitionTime": "2022-08-08T06:26:24Z",
+                        "message": "kubelet has sufficient memory available",
+                        "reason": "KubeletHasSufficientMemory",
+                        "status": "False",
+                        "type": "MemoryPressure"
+                    },
+                    {
+                        "lastHeartbeatTime": "2022-08-19T13:58:22Z",
+                        "lastTransitionTime": "2022-08-08T06:26:24Z",
+                        "message": "kubelet has no disk pressure",
+                        "reason": "KubeletHasNoDiskPressure",
+                        "status": "False",
+                        "type": "DiskPressure"
+                    },
+                    {
+                        "lastHeartbeatTime": "2022-08-19T13:58:22Z",
+                        "lastTransitionTime": "2022-08-08T06:26:24Z",
+                        "message": "kubelet has sufficient PID available",
+                        "reason": "KubeletHasSufficientPID",
+                        "status": "False",
+                        "type": "PIDPressure"
+                    },
+                    {
+                        "lastHeartbeatTime": "2022-08-19T13:58:22Z",
+                        "lastTransitionTime": "2022-08-08T06:26:57Z",
+                        "message": "kubelet is posting ready status",
+                        "reason": "KubeletReady",
+                        "status": "True",
+                        "type": "Ready"
+                    }
+                ],
+                "daemonEndpoints": {
+                    "kubeletEndpoint": {
+                        "Port": 10250
+                    }
+                },
+                "images": [
+                    {
+                        "names": [
+                            "hubproxy.docker.internal:5000/docker/desktop-kubernetes@sha256:f518f3725682958825045b0c66b523825e302bdd298de65ceaacfe565a73602e",
+                            "hubproxy.docker.internal:5000/docker/desktop-kubernetes:kubernetes-v1.24.2-cni-v1.1.1-critools-v1.24.2-cri-dockerd-v0.2.1-1-debian"
+                        ],
+                        "sizeBytes": 364071082
+                    },
+                    {
+                        "names": [
+                            "k8s.gcr.io/etcd:3.5.3-0"
+                        ],
+                        "sizeBytes": 299495233
+                    },
+                    {
+                        "names": [
+                            "k8s.gcr.io/kube-apiserver:v1.24.2"
+                        ],
+                        "sizeBytes": 129710737
+                    },
+                    {
+                        "names": [
+                            "k8s.gcr.io/kube-controller-manager:v1.24.2"
+                        ],
+                        "sizeBytes": 119352229
+                    },
+                    {
+                        "names": [
+                            "k8s.gcr.io/kube-proxy:v1.24.2"
+                        ],
+                        "sizeBytes": 109939812
+                    },
+                    {
+                        "names": [
+                            "ubuntu@sha256:34fea4f31bf187bc915536831fd0afc9d214755bf700b5cdb1336c82516d154e",
+                            "ubuntu:latest"
+                        ],
+                        "sizeBytes": 77833489
+                    },
+                    {
+                        "names": [
+                            "k8s.gcr.io/kube-scheduler:v1.24.2"
+                        ],
+                        "sizeBytes": 50989989
+                    },
+                    {
+                        "names": [
+                            "k8s.gcr.io/coredns/coredns:v1.8.6"
+                        ],
+                        "sizeBytes": 46829283
+                    },
+                    {
+                        "names": [
+                            "docker/desktop-storage-provisioner:v2.0"
+                        ],
+                        "sizeBytes": 41850220
+                    },
+                    {
+                        "names": [
+                            "docker/desktop-vpnkit-controller:v2.0"
+                        ],
+                        "sizeBytes": 21034536
+                    },
+                    {
+                        "names": [
+                            "k8s.gcr.io/pause:3.7"
+                        ],
+                        "sizeBytes": 711184
+                    }
+                ],
+                "nodeInfo": {
+                    "architecture": "amd64",
+                    "bootID": "3c2c5023-2d4d-4f91-9480-61b322a4c09b",
+                    "containerRuntimeVersion": "docker://20.10.17",
+                    "kernelVersion": "5.10.104-linuxkit",
+                    "kubeProxyVersion": "v1.24.2",
+                    "kubeletVersion": "v1.24.2",
+                    "machineID": "d55f9871-7011-4e11-a567-6ab0685f96bc",
+                    "operatingSystem": "linux",
+                    "osImage": "Docker Desktop",
+                    "systemUUID": "463045d8-0000-0000-843d-2875c6575f83"
+                }
+            }
+        }
+    ],
+    "kind": "List",
+    "metadata": {
+        "resourceVersion": ""
+    }
+}

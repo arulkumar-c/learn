@@ -1,0 +1,15 @@
+${HOME}/learn/python/kafka/kafka_2.12-3.3.1/bin
+
+./zookeeper-server-start.sh ../config/zookeeper.properties 
+
+./kafka-server-start.sh ../config/server.properties 
+
+
+------------------------------------------------------------------------------------------
+
+
+${HOME}learn/python/kafka
+
+python producer.py 
+
+python consumer.py 

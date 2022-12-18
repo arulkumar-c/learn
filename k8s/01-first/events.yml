@@ -1,0 +1,448 @@
+Name:             pingtest-6c8dd9457b-mjkmh.170cc55605e6f4f9
+Namespace:        default
+Labels:           <none>
+Annotations:      <none>
+API Version:      v1
+Count:            5
+Event Time:       <nil>
+First Timestamp:  2022-08-19T14:28:55Z
+Involved Object:
+  API Version:       v1
+  Field Path:        spec.containers{ubuntu-ctr}
+  Kind:              Pod
+  Name:              pingtest-6c8dd9457b-mjkmh
+  Namespace:         default
+  Resource Version:  453150
+  UID:               ee7e32e3-2b92-477f-8d54-1cfe82d21dc0
+Kind:                Event
+Last Timestamp:      2022-08-20T03:00:57Z
+Message:             Container image "ubuntu:latest" already present on machine
+Metadata:
+  Creation Timestamp:  2022-08-19T14:28:55Z
+  Managed Fields:
+    API Version:  v1
+    Fields Type:  FieldsV1
+    fieldsV1:
+      f:count:
+      f:firstTimestamp:
+      f:involvedObject:
+      f:lastTimestamp:
+      f:message:
+      f:reason:
+      f:source:
+        f:component:
+        f:host:
+      f:type:
+    Manager:          kubelet
+    Operation:        Update
+    Time:             2022-08-19T14:28:55Z
+  Resource Version:   471155
+  UID:                948ac42a-502c-48b3-b41c-1da30e1c6634
+Reason:               Pulled
+Reporting Component:  
+Reporting Instance:   
+Source:
+  Component:  kubelet
+  Host:       docker-desktop
+Type:         Normal
+Events:       <none>
+
+
+Name:             pingtest-6c8dd9457b-mjkmh.170cc556087a49df
+Namespace:        default
+Labels:           <none>
+Annotations:      <none>
+API Version:      v1
+Count:            5
+Event Time:       <nil>
+First Timestamp:  2022-08-19T14:28:55Z
+Involved Object:
+  API Version:       v1
+  Field Path:        spec.containers{ubuntu-ctr}
+  Kind:              Pod
+  Name:              pingtest-6c8dd9457b-mjkmh
+  Namespace:         default
+  Resource Version:  453150
+  UID:               ee7e32e3-2b92-477f-8d54-1cfe82d21dc0
+Kind:                Event
+Last Timestamp:      2022-08-20T03:00:57Z
+Message:             Created container ubuntu-ctr
+Metadata:
+  Creation Timestamp:  2022-08-19T14:28:55Z
+  Managed Fields:
+    API Version:  v1
+    Fields Type:  FieldsV1
+    fieldsV1:
+      f:count:
+      f:firstTimestamp:
+      f:involvedObject:
+      f:lastTimestamp:
+      f:message:
+      f:reason:
+      f:source:
+        f:component:
+        f:host:
+      f:type:
+    Manager:          kubelet
+    Operation:        Update
+    Time:             2022-08-19T14:28:55Z
+  Resource Version:   471162
+  UID:                3967521e-c6f4-4cac-bf3a-acff25cd7f5f
+Reason:               Created
+Reporting Component:  
+Reporting Instance:   
+Source:
+  Component:  kubelet
+  Host:       docker-desktop
+Type:         Normal
+Events:       <none>
+
+
+Name:             pingtest-6c8dd9457b-mjkmh.170cc5560ea6c6ff
+Namespace:        default
+Labels:           <none>
+Annotations:      <none>
+API Version:      v1
+Count:            5
+Event Time:       <nil>
+First Timestamp:  2022-08-19T14:28:55Z
+Involved Object:
+  API Version:       v1
+  Field Path:        spec.containers{ubuntu-ctr}
+  Kind:              Pod
+  Name:              pingtest-6c8dd9457b-mjkmh
+  Namespace:         default
+  Resource Version:  453150
+  UID:               ee7e32e3-2b92-477f-8d54-1cfe82d21dc0
+Kind:                Event
+Last Timestamp:      2022-08-20T03:00:57Z
+Message:             Started container ubuntu-ctr
+Metadata:
+  Creation Timestamp:  2022-08-19T14:28:56Z
+  Managed Fields:
+    API Version:  v1
+    Fields Type:  FieldsV1
+    fieldsV1:
+      f:count:
+      f:firstTimestamp:
+      f:involvedObject:
+      f:lastTimestamp:
+      f:message:
+      f:reason:
+      f:source:
+        f:component:
+        f:host:
+      f:type:
+    Manager:          kubelet
+    Operation:        Update
+    Time:             2022-08-19T14:28:56Z
+  Resource Version:   471164
+  UID:                f69c8088-32dd-44ea-bd1b-03165bfe6243
+Reason:               Started
+Reporting Component:  
+Reporting Instance:   
+Source:
+  Component:  kubelet
+  Host:       docker-desktop
+Type:         Normal
+Events:       <none>
+
+
+Name:             pingtest-6c8dd9457b-w44lt.170cc37de63e5e89
+Namespace:        default
+Labels:           <none>
+Annotations:      <none>
+API Version:      v1
+Count:            5
+Event Time:       <nil>
+First Timestamp:  2022-08-19T13:55:08Z
+Involved Object:
+  API Version:       v1
+  Field Path:        spec.containers{ubuntu-ctr}
+  Kind:              Pod
+  Name:              pingtest-6c8dd9457b-w44lt
+  Namespace:         default
+  Resource Version:  450569
+  UID:               6aaa5ae2-e4be-4b57-938a-ca5f6b40cdc8
+Kind:                Event
+Last Timestamp:      2022-08-20T02:27:09Z
+Message:             Created container ubuntu-ctr
+Metadata:
+  Creation Timestamp:  2022-08-19T13:55:08Z
+  Managed Fields:
+    API Version:  v1
+    Fields Type:  FieldsV1
+    fieldsV1:
+      f:count:
+      f:firstTimestamp:
+      f:involvedObject:
+      f:lastTimestamp:
+      f:message:
+      f:reason:
+      f:source:
+        f:component:
+        f:host:
+      f:type:
+    Manager:          kubelet
+    Operation:        Update
+    Time:             2022-08-19T13:55:08Z
+  Resource Version:   468645
+  UID:                1c8c15e7-9556-4099-8625-07cdea3700e3
+Reason:               Created
+Reporting Component:  
+Reporting Instance:   
+Source:
+  Component:  kubelet
+  Host:       docker-desktop
+Type:         Normal
+Events:       <none>
+
+
+Name:             pingtest-6c8dd9457b-w44lt.170cc37deb5b19e6
+Namespace:        default
+Labels:           <none>
+Annotations:      <none>
+API Version:      v1
+Count:            5
+Event Time:       <nil>
+First Timestamp:  2022-08-19T13:55:08Z
+Involved Object:
+  API Version:       v1
+  Field Path:        spec.containers{ubuntu-ctr}
+  Kind:              Pod
+  Name:              pingtest-6c8dd9457b-w44lt
+  Namespace:         default
+  Resource Version:  450569
+  UID:               6aaa5ae2-e4be-4b57-938a-ca5f6b40cdc8
+Kind:                Event
+Last Timestamp:      2022-08-20T02:27:09Z
+Message:             Started container ubuntu-ctr
+Metadata:
+  Creation Timestamp:  2022-08-19T13:55:08Z
+  Managed Fields:
+    API Version:  v1
+    Fields Type:  FieldsV1
+    fieldsV1:
+      f:count:
+      f:firstTimestamp:
+      f:involvedObject:
+      f:lastTimestamp:
+      f:message:
+      f:reason:
+      f:source:
+        f:component:
+        f:host:
+      f:type:
+    Manager:          kubelet
+    Operation:        Update
+    Time:             2022-08-19T13:55:08Z
+  Resource Version:   468647
+  UID:                6372edbd-1556-40ff-b3b6-02de9383e8da
+Reason:               Started
+Reporting Component:  
+Reporting Instance:   
+Source:
+  Component:  kubelet
+  Host:       docker-desktop
+Type:         Normal
+Events:       <none>
+
+
+Name:             pingtest-6c8dd9457b-w44lt.170cc6c3c4787432
+Namespace:        default
+Labels:           <none>
+Annotations:      <none>
+API Version:      v1
+Count:            4
+Event Time:       <nil>
+First Timestamp:  2022-08-19T14:55:06Z
+Involved Object:
+  API Version:       v1
+  Field Path:        spec.containers{ubuntu-ctr}
+  Kind:              Pod
+  Name:              pingtest-6c8dd9457b-w44lt
+  Namespace:         default
+  Resource Version:  450569
+  UID:               6aaa5ae2-e4be-4b57-938a-ca5f6b40cdc8
+Kind:                Event
+Last Timestamp:      2022-08-20T02:27:09Z
+Message:             Container image "ubuntu:latest" already present on machine
+Metadata:
+  Creation Timestamp:  2022-08-19T14:55:06Z
+  Managed Fields:
+    API Version:  v1
+    Fields Type:  FieldsV1
+    fieldsV1:
+      f:count:
+      f:firstTimestamp:
+      f:involvedObject:
+      f:lastTimestamp:
+      f:message:
+      f:reason:
+      f:source:
+        f:component:
+        f:host:
+      f:type:
+    Manager:          kubelet
+    Operation:        Update
+    Time:             2022-08-19T14:55:06Z
+  Resource Version:   468642
+  UID:                0fce7dd0-7823-42cf-801c-3d643c6becac
+Reason:               Pulled
+Reporting Component:  
+Reporting Instance:   
+Source:
+  Component:  kubelet
+  Host:       docker-desktop
+Type:         Normal
+Events:       <none>
+
+
+Name:             pingtest-6c8dd9457b-zsv6h.170cc55605e2a48b
+Namespace:        default
+Labels:           <none>
+Annotations:      <none>
+API Version:      v1
+Count:            5
+Event Time:       <nil>
+First Timestamp:  2022-08-19T14:28:55Z
+Involved Object:
+  API Version:       v1
+  Field Path:        spec.containers{ubuntu-ctr}
+  Kind:              Pod
+  Name:              pingtest-6c8dd9457b-zsv6h
+  Namespace:         default
+  Resource Version:  453151
+  UID:               85c7d2bd-2afd-40dc-92d9-68134045a7f1
+Kind:                Event
+Last Timestamp:      2022-08-20T03:00:57Z
+Message:             Container image "ubuntu:latest" already present on machine
+Metadata:
+  Creation Timestamp:  2022-08-19T14:28:55Z
+  Managed Fields:
+    API Version:  v1
+    Fields Type:  FieldsV1
+    fieldsV1:
+      f:count:
+      f:firstTimestamp:
+      f:involvedObject:
+      f:lastTimestamp:
+      f:message:
+      f:reason:
+      f:source:
+        f:component:
+        f:host:
+      f:type:
+    Manager:          kubelet
+    Operation:        Update
+    Time:             2022-08-19T14:28:55Z
+  Resource Version:   471153
+  UID:                b77ba999-67c2-43f9-bf13-fcd9979e8980
+Reason:               Pulled
+Reporting Component:  
+Reporting Instance:   
+Source:
+  Component:  kubelet
+  Host:       docker-desktop
+Type:         Normal
+Events:       <none>
+
+
+Name:             pingtest-6c8dd9457b-zsv6h.170cc556087cfdb2
+Namespace:        default
+Labels:           <none>
+Annotations:      <none>
+API Version:      v1
+Count:            5
+Event Time:       <nil>
+First Timestamp:  2022-08-19T14:28:55Z
+Involved Object:
+  API Version:       v1
+  Field Path:        spec.containers{ubuntu-ctr}
+  Kind:              Pod
+  Name:              pingtest-6c8dd9457b-zsv6h
+  Namespace:         default
+  Resource Version:  453151
+  UID:               85c7d2bd-2afd-40dc-92d9-68134045a7f1
+Kind:                Event
+Last Timestamp:      2022-08-20T03:00:57Z
+Message:             Created container ubuntu-ctr
+Metadata:
+  Creation Timestamp:  2022-08-19T14:28:55Z
+  Managed Fields:
+    API Version:  v1
+    Fields Type:  FieldsV1
+    fieldsV1:
+      f:count:
+      f:firstTimestamp:
+      f:involvedObject:
+      f:lastTimestamp:
+      f:message:
+      f:reason:
+      f:source:
+        f:component:
+        f:host:
+      f:type:
+    Manager:          kubelet
+    Operation:        Update
+    Time:             2022-08-19T14:28:55Z
+  Resource Version:   471161
+  UID:                76fb3632-e20f-4587-865a-33d84e97f961
+Reason:               Created
+Reporting Component:  
+Reporting Instance:   
+Source:
+  Component:  kubelet
+  Host:       docker-desktop
+Type:         Normal
+Events:       <none>
+
+
+Name:             pingtest-6c8dd9457b-zsv6h.170cc5560f3b1c65
+Namespace:        default
+Labels:           <none>
+Annotations:      <none>
+API Version:      v1
+Count:            5
+Event Time:       <nil>
+First Timestamp:  2022-08-19T14:28:56Z
+Involved Object:
+  API Version:       v1
+  Field Path:        spec.containers{ubuntu-ctr}
+  Kind:              Pod
+  Name:              pingtest-6c8dd9457b-zsv6h
+  Namespace:         default
+  Resource Version:  453151
+  UID:               85c7d2bd-2afd-40dc-92d9-68134045a7f1
+Kind:                Event
+Last Timestamp:      2022-08-20T03:00:57Z
+Message:             Started container ubuntu-ctr
+Metadata:
+  Creation Timestamp:  2022-08-19T14:28:56Z
+  Managed Fields:
+    API Version:  v1
+    Fields Type:  FieldsV1
+    fieldsV1:
+      f:count:
+      f:firstTimestamp:
+      f:involvedObject:
+      f:lastTimestamp:
+      f:message:
+      f:reason:
+      f:source:
+        f:component:
+        f:host:
+      f:type:
+    Manager:          kubelet
+    Operation:        Update
+    Time:             2022-08-19T14:28:56Z
+  Resource Version:   471163
+  UID:                fed86f18-9058-4329-8a8d-fcfaa5f60eea
+Reason:               Started
+Reporting Component:  
+Reporting Instance:   
+Source:
+  Component:  kubelet
+  Host:       docker-desktop
+Type:         Normal
+Events:       <none>

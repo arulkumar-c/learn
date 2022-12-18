@@ -1,0 +1,258 @@
+
+==========================================================================================
+
+apt-get update
+apt-get install iputils-ping curl dnsutils iproute2 -y
+
+ipvsadm -ln
+
+openssl genrsa -out arul.key 2048
+openssl genrsa -out ca.key 2048
+openssl req -new -x509 -config ./ca.cnf -key ./ca.key -out ca.crt -days 365 -batch
+
+........................................  ca.cnf  ........................................
+# OpenSSL CA configuration file
+[ ca ]
+default_ca = CA_default
+
+[ CA_default ]
+default_days = 365
+database = index.txt
+serial = serial.txt
+default_md = sha256
+copy_extensions = copy
+unique_subject = no
+
+# Used to create the CA certificate.
+[ req ]
+prompt=no
+distinguished_name = distinguished_name
+x509_extensions = extensions
+
+[ distinguished_name ]
+organizationName = Cockroach
+commonName = Cockroach CA
+
+[ extensions ]
+keyUsage = critical,digitalSignature,nonRepudiation,keyEncipherment,keyCertSign
+basicConstraints = critical,CA:true,pathlen:1
+
+# Common policy for nodes and users.
+[ signing_policy ]
+organizationName = supplied
+commonName = optional
+
+# Used to sign node certificates.
+[ signing_node_req ]
+keyUsage = critical,digitalSignature,keyEncipherment
+extendedKeyUsage = serverAuth,clientAuth
+
+# Used to sign client certificates.
+[ signing_client_req ]
+keyUsage = critical,digitalSignature,keyEncipherment
+extendedKeyUsage = clientAuth
+..........................................................................................
+
+openssl req -new -key arul.key -out arul.csr -subj "/CN=arul/O=akc"
+openssl x509 -req -in arul.csr -CA ./ca.crt -CAkey ./ca.key -CAcreateserial -out arul.crt -days 365
+
+openssl x509 -req -in arul.csr -CAkey ./ca.key -CAcreateserial -out arul.crt -days 365
+
+
+==========================================================================================
+
+docker exec -it 64258b3527ee3eb8259d3e9ca97a50e004fc2fbfdc434a8be1ff2ccd94ad900b /bin/sh
+
+docker container ls
+docker container ls --quiet
+docker container ls --quiet --no-trunc
+
+==========================================================================================
+
+kubectl api-resources
+
+kubectl apply -f YAML.file --context=NAME
+
+kubectl config view
+kubectl config current-context
+kubectl config get-contexts
+kubectl config get-clusters
+
+kubectl config use-context arul
+kubectl config set-context arul --cluster=acg.k8s.local --namespace=akc --user=arul
+kubectl config set-credentials arul --client-certificate=arul.crt --client-key=arul.key
+
+kubectl config use-context arul
+
+kubectl create secret generic mysql-pass --from-literal=password=Password123
+
+kubectl create namespace NAME
+
+kubectl delete --all deployments --namespace=foo
+kubectl delete --all pods --namespace=foo
+kubectl delete --all namespaces
+kubectl delete deploy
+kubectl delete namespace NAME
+
+kubectl delete pod,service NAMES
+
+kubectl describe pods 
+
+kubectl describe pv 
+
+kubectl describe pvc
+
+kubectl describe svc 
+kubectl describe svc <serviceName>
+
+kubectl exec -it <podname> bash
+
+kubectl get clusterrolebindings
+kubectl get clusterrolebindings ROLE_NAME -o yaml
+
+kubectl get clusterrole ROLE_NAME
+	kubectl get clusterrole cluster-admin -o yaml
+	kubectl get clusterrole kubeadm:get-nodes -o yaml
+
+kubectl get deploy
+kubectl get deploy --namespace NAME
+kubectl get deploy NAME --watch
+
+kubectl get hpa --namespace NAME
+
+kubectl get nodes
+kubectl get nodes -o wide
+kubectl get notes -o json
+
+kubectl get ns
+kubectl get ns -o yaml
+
+kubectl get pods
+kubectl get pods --all-namespaces
+kubectl get pods -o wide
+kubectl get pods -o wide -o custom-columns='PEYAR:.metadata.name,MENPORUL:.spec.containers[*].image'
+kubectl get pods -o json
+
+kubectl get pv
+
+kubectl get pvc
+
+kubectl rollout history deploy NAME
+kubectl rollout history deploy NAME --revision=3
+kubectl rollout status deploy NAME
+kubectl rollout undo deploy NAME
+kubectl rollout undo deploy NAME --to-revision=1
+
+
+kubectl get sc
+
+kubectl get secrets
+
+kubectl get svc
+kubectl get svc --all-namespaces=true -o wide
+kubectl get svc --watch        # watches for any change to the state of the SVCs.
+
+kubectl version -o yaml
+
+==========================================================================================
+
+kubectl describe apiservices > kubectl-describe-apiservices.txt
+kubectl describe bindings
+kubectl describe certificatesigningrequests > kubectl-describe-certificatesigningrequests.txt
+kubectl describe cj > kubectl-describe-cj.txt
+kubectl describe clusterrolebindings > kubectl-describe-clusterrolebindings.txt
+kubectl describe clusterroles > kubectl-describe-clusterroles.txt
+kubectl describe cm
+kubectl describe componentstatuses
+kubectl describe configmaps
+kubectl describe controllerrevisions > kubectl-describe-controllerrevisions.txt
+kubectl describe crd,crds > kubectl-describe-crd,crds.txt
+kubectl describe cronjobs > kubectl-describe-cronjobs.txt
+kubectl describe cs
+kubectl describe csidrivers > kubectl-describe-csidrivers.txt
+kubectl describe csinodes > kubectl-describe-csinodes.txt
+kubectl describe csistoragecapacities > kubectl-describe-csistoragecapacities.txt
+kubectl describe csr > kubectl-describe-csr.txt
+kubectl describe customresourcedefinitions > kubectl-describe-customresourcedefinitions.txt
+kubectl describe daemonsets > kubectl-describe-daemonsets.txt
+kubectl describe deploy > kubectl-describe-deploy.txt
+kubectl describe deployments > kubectl-describe-deployments.txt
+kubectl describe ds > kubectl-describe-ds.txt
+kubectl describe endpoints
+kubectl describe endpointslices > kubectl-describe-endpointslices.txt
+kubectl describe ep
+kubectl describe ev
+kubectl describe ev > kubectl-describe-ev.txt
+kubectl describe events
+kubectl describe events > kubectl-describe-events.txt
+kubectl describe flowschemas > kubectl-describe-flowschemas.txt
+kubectl describe horizontalpodautoscalers > kubectl-describe-horizontalpodautoscalers.txt
+kubectl describe hpa > kubectl-describe-hpa.txt
+kubectl describe ing > kubectl-describe-ing.txt
+kubectl describe ingressclasses > kubectl-describe-ingressclasses.txt
+kubectl describe ingresses > kubectl-describe-ingresses.txt
+kubectl describe jobs > kubectl-describe-jobs.txt
+kubectl describe leases > kubectl-describe-leases.txt
+kubectl describe limitranges
+kubectl describe limits
+kubectl describe localsubjectaccessreviews > kubectl-describe-localsubjectaccessreviews.txt
+kubectl describe mutatingwebhookconfigurations > kubectl-describe-mutatingwebhookconfigurations.txt
+kubectl describe namespaces
+kubectl describe netpol > kubectl-describe-netpol.txt
+kubectl describe networkpolicies > kubectl-describe-networkpolicies.txt
+kubectl describe no
+kubectl describe nodes
+kubectl describe ns
+kubectl describe pc > kubectl-describe-pc.txt
+kubectl describe pdb > kubectl-describe-pdb.txt
+kubectl describe persistentvolumeclaims
+kubectl describe persistentvolumes
+kubectl describe po
+kubectl describe poddisruptionbudgets > kubectl-describe-poddisruptionbudgets.txt
+kubectl describe pods
+kubectl describe podsecuritypolicies > kubectl-describe-podsecuritypolicies.txt
+kubectl describe podtemplates > kubectl-describe-podtemplates.txt
+kubectl describe priorityclasses > kubectl-describe-priorityclasses.txt
+kubectl describe prioritylevelconfigurations > kubectl-describe-prioritylevelconfigurations.txt
+kubectl describe psp > kubectl-describe-psp.txt
+kubectl describe pv
+kubectl describe pvc
+kubectl describe quota > kubectl-describe-quota.txt
+kubectl describe rc > kubectl-describe-rc.txt
+kubectl describe replicasets > kubectl-describe-replicasets.txt
+kubectl describe replicationcontrollers > kubectl-describe-replicationcontrollers.txt
+kubectl describe resourcequotas > kubectl-describe-resourcequotas.txt
+kubectl describe rolebindings > kubectl-describe-rolebindings.txt
+kubectl describe roles > kubectl-describe-roles.txt
+kubectl describe rs > kubectl-describe-rs.txt
+kubectl describe runtimeclasses > kubectl-describe-runtimeclasses.txt
+kubectl describe sa > kubectl-describe-sa.txt
+kubectl describe sc > kubectl-describe-sc.txt
+kubectl describe secrets > kubectl-describe-secrets.txt
+kubectl describe selfsubjectaccessreviews > kubectl-describe-selfsubjectaccessreviews.txt
+kubectl describe selfsubjectrulesreviews > kubectl-describe-selfsubjectrulesreviews.txt
+kubectl describe serviceaccounts > kubectl-describe-serviceaccounts.txt
+kubectl describe services > kubectl-describe-services.txt
+kubectl describe statefulsets > kubectl-describe-statefulsets.txt
+kubectl describe storageclasses > kubectl-describe-storageclasses.txt
+kubectl describe sts > kubectl-describe-sts.txt
+kubectl describe subjectaccessreviews > kubectl-describe-subjectaccessreviews.txt
+kubectl describe svc > kubectl-describe-svc.txt
+kubectl describe tokenreviews > kubectl-describe-tokenreviews.txt
+kubectl describe validatingwebhookconfigurations > kubectl-describe-validatingwebhookconfigurations.txt
+kubectl describe volumeattachments > kubectl-describe-volumeattachments.txt
+
+==========================================================================================
+
+
+==========================================================================================
+
+
+==========================================================================================
+
+
+==========================================================================================
+
+
+==========================================================================================
+
